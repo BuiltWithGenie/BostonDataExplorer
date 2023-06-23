@@ -20,7 +20,7 @@ $> julia --project
 ```
 
 ```julia
-julia> using GenieFramework; Genie.loadapp(); Server.isrunning || up() # start server
+julia> using GenieFramework; Genie.loadapp(); up() # start server
 ```
 
 ## Usage
