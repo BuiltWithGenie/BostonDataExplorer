@@ -1,0 +1,57 @@
+<div class="st-col col-12 col-sm st-module">
+    <q-tabs v-model="tab" align="justify" narrow-indicator="" class="q-mb-lg">
+        <q-tab name="home" label="Home" class="text-purple"></q-tab>
+        <q-tab name="explore" label="Explore" class="text-orange"></q-tab>
+        <q-tab name="analysis" label="Analysis" class="text-teal"></q-tab>
+    </q-tabs>
+    <q-tab-panels v-model="tab" animated="" transition-prev="scale" transition-next="scale" animated class="text-white text-center">
+        <q-tab-panel name="Home" :name="'home'">
+            <div class="row justify-center">
+                <q-card>
+                    <q-card-section>
+                        <div>
+                            <div class="st-col col-6 col-sm">
+                                <h2>
+                                    <div id="il8ca"><span id="iu4ig">Boston Housing Prices</span></div>
+                                </h2>
+                            </div>
+                            <p></p>
+                            <div id="ids3n"></div>
+                            <p id="ihprg">The Boston Housing Dataset is a derived from information collected by the U.S. Census Service concerning housing in the area of Boston MA. The following describes the dataset columns:</p>
+                            <ol id="i0xdb">
+                                <li id="i5ptx">ZN: proportion of residential land zoned for lots over 25,000 sq.ft.</li>
+                                <li id="ioyty">INDUS: proportion of non-retail business acres per town</li>
+                                <li id="igswc">CHAS: Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</li>
+                                <li id="ithfq">NOX: nitric oxides concentration (parts per 10 million)<br />1https://archive.ics.uci.edu/ml/datasets/Housing<br />123<br />20.2. Load the Dataset 124</li>
+                                <li id="i979g">RM: average number of rooms per dwelling</li>
+                                <li id="ikkd2">AGE: proportion of owner-occupied units built prior to 1940</li>
+                                <li id="i6naq">DIS: weighted distances to ﬁve Boston employment centers</li>
+                                <li id="iqajg">RAD: index of accessibility to radial highways</li>
+                                <li id="ie5zk">TAX: full-value property-tax rate per \$10,000</li>
+                                <li id="ixdah">PTRATIO: pupil-teacher ratio by town 12. B: 1000(Bk−0.63)2 where Bk is the proportion of blacks by town 13. LSTAT: % lower status of the population</li>
+                                <li id="irtum">MEDV: Median value of owner-occupied homes in \$1000s<br />We can see that the input attributes have a mixture of units.</li>
+                            </ol>
+                        </div>
+                    </q-card-section>
+                </q-card>
+            </div>
+        </q-tab-panel>
+        <q-tab-panel :name="'explore'">
+            <q-table v-model="housing_data" :data="housing_data.data" :columns="housing_data.columns" :pagination.sync="housing_data_pagination">
+            </q-table>
+        </q-tab-panel>
+        <q-tab-panel :name="'analysis'">
+            <q-card class="my-card text-white">
+                <q-card-section>
+                    <plotly :data="scatter_trace" :layout="scatter_layout"></plotly>
+                </q-card-section>
+                <q-card-section>
+                    <plotly :data="hist_trace" :layout="hist_layout"></plotly>
+                </q-card-section>
+                <q-card-section>
+                    <plotly :data="box_trace" :layout="box_layout"></plotly>
+                </q-card-section>
+            </q-card>
+        </q-tab-panel>
+    </q-tab-panels>
+</div>
