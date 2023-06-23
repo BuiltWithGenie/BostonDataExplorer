@@ -3,6 +3,8 @@
 Demo app for the [Boston House Prices](https://www.kaggle.com/datasets/vikrishnan/boston-house-prices) dataset. Created with GenieBuilder, Genie
 and Julia.
 
+![demo gif](preview.gif)
+
 ## Installation
 
 Clone the repository and install the dependencies:
