@@ -3,11 +3,9 @@ CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
 PlotlyBase = "a03496cd-edff-5a9b-9e67-9cda94a718b5"
-Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 
 [compat]
 CSV = "0.10.11"
 DataFrames = "1.5.0"
 GenieFramework = "1.19.0"
 PlotlyBase = "0.8.19"
-Statistics = "1.9.0"

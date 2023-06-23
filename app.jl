@@ -1,10 +1,9 @@
 module App
-# set up Genie development environmet
+
 using GenieFramework
 using CSV
 using DataFrames
 using PlotlyBase
-using Statistics
 
 @genietools
 
